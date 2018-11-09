@@ -51,8 +51,11 @@
         const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
         const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
         if (!audio) {
+          //if key doesn't match valid keystroke then return out of the function
+
           return;
         }
+        //else reset time and require
         audio.currentTime = 0;
         audio.play();
         console.log("key: ", key);
